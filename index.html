@@ -20,13 +20,13 @@
             <a href="#produtos" class="nav-link">Produtos</a>
         </nav>
   </div>
-  <img src="imagens/logo.svg" alt="Beauty Space" class="logo-img">
+  <img src="imagem/logo.svg" alt="Beauty Space" class="logo-img">
 </header>
 
 <section id="inicio" class="secao">
   <h1>Bem vindo(a) ao Beauty Space!</h1>
   <p>Um espaço para você se dar a atenção que merece.</p>
-    <button id="btn-cadastro" class="btn-cadastro">Cadastre-se aqui</button>
+    <button id="btnCadastroModal" class="btn-cadastro">Cadastre-se</button>
     <button id="btn-login" class="btn-conta">Entre com uma conta existente</button>
 </section>
 
@@ -46,18 +46,37 @@
   </div>
 </div>
 
+<div id="cliente-cadastro" class="cliente oculto">
+  <div class="cliente-conteudo">
+    <span class="fechar" data-modal="cliente-cadastro">&times;</span>
+    <h2>Faça seu cadastro</h2>
+    <form id="form-cadastro">
+      <label for="cadastro-email">E-mail</label>
+      <input type="email" id="cadastro-email" required>
+
+      <label for="cadastro-nome">Nome do usuário</label>
+      <input type="name" id="cadastro-nome" required>
+
+      <label for="cadastro-senha">Senha</label>
+      <input type="password" id="cadastro-senha" required>     
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</div>
+
 
 <div class="carrossel">
   <div class="janela">
     <div class="trilho" id="trilho">
       <div class="slide">
-        <img src="imagens/cronograma_capilar.jpg" alt="Kit cronograma_capilar">
+        <img src="imagem/cronograma_capilar.jpg" alt="Kit cronograma_capilar">
       </div>
       <div class="slide">
-        <img src="imagens/kit_nutrição.jpg" alt="Kit kit_nutrição">
+        <img src="imagem/kit_nutrição.jpg" alt="Kit kit_nutrição">
       </div>
       <div class="slide">
-        <img src="imagens/progressiva_wella.jpg" alt="progressiva_wella">
+        <img src="imagem/wella_progressiva.png" alt="progressiva_wella">
       </div>
     </div>
       <div class="btn-carrossel">
@@ -81,19 +100,19 @@
 
 <div class="vitrine-produtos">
   <div class="amostra-produto">
-      <img src="imagens/kit_nutrição.jpg" alt="Kit Nutrição Capilar">
+      <img src="imagem/kit_nutrição.jpg" alt="Kit Nutrição Capilar">
       <p class="nome-produto">Kit Nutrição Capilar</p>
       <p class="preco-produto">R$ 89,90</p>
   </div>
 
   <div class="amostra-produto">
-      <img src="imagens/cronograma_capilar.jpg" alt="Kit Cronograma Capilar">
+      <img src="imagem/cronograma_capilar.jpg" alt="Kit Cronograma Capilar">
       <p class="nome-produto">Kit Cronograma Capilar</p>
       <p class="preco-produto">R$ 120,00</p>
   </div>
 
   <div class="amostra-produto">
-      <img src="imagens/progressiva_wella.jpg" alt="Progressiva Wella">
+      <img src="imagem/wella_progressiva.png" alt="Progressiva Wella">
       <p class="nome-produto">Progressiva Wella</p>
       <p class="preco-produto">R$ 150,00</p>
   </div>
