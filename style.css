@@ -148,6 +148,7 @@ p{
   margin: 80px auto 40px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .janela { overflow: hidden; width: 300px; }
@@ -267,28 +268,24 @@ transition: transform 0.6s ease;
   display: none;
 }
 
-/*janela flutuante para login/cadastro*/
-
-/* Modal - camada que cobre a tela toda */
 .cliente {
-  display: none;              /* controlado pelo JS junto com .oculto */
+  display: none;            
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);   /* fundo escurecido */
+  background: rgba(0, 0, 0, 0.5);   
   z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
-/* Quando NÃO tiver a classe oculto, mostra como flex (pra centralizar) */
 .cliente:not(.oculto) {
   display: flex;
 }
 
-/* A caixinha branca de dentro */
+
 .cliente-conteudo {
   background: #fff;
   padding: 30px 40px;
@@ -300,7 +297,7 @@ transition: transform 0.6s ease;
   animation: aparecer 0.25s ease-out;
 }
 
-/* Botão de fechar (×) */
+
 .fechar {
   position: absolute;
   top: 12px;
@@ -311,10 +308,10 @@ transition: transform 0.6s ease;
 }
 
 .fechar:hover {
-  color: #b0475a; /* combina com o tom do seu site */
+  color: #b0475a; 
 }
 
-/* Animação suave ao abrir */
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -326,7 +323,7 @@ transition: transform 0.6s ease;
   }
 }
 
-/* Deixa os inputs e formulário organizados dentro do modal */
+
 .cliente-conteudo form {
   display: flex;
   flex-direction: column;
