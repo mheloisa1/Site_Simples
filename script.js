@@ -55,40 +55,35 @@ botaoVerMais.addEventListener("click", function () {
   }
 });
 
-const btnCadastro = document.getElementById('btn-cadastro');
+
+const btnCadastroModal = document.getElementById('btnCadastroModal');
 const btnLogin = document.getElementById('btn-login');
 
-const modalCadastro = document.getElementById('cliente-cadastro');
 const modalLogin = document.getElementById('cliente-login');
+const modalCadastro = document.getElementById('cliente-cadastro');
 
-const formCadastro = document.getElementById('form-cadastro');
-const formLogin = document.getElementById('form-login');
-
+const fecharBotoes = document.querySelectorAll('.fechar');
 
 btnLogin.addEventListener('click', () => {
   modalLogin.classList.remove('oculto');
 });
 
-document.querySelectorAll('.fechar').forEach(botao => {
+btnCadastroModal.addEventListener('click', () => {
+  modalCadastro.classList.remove('oculto');
+});
+
+fecharBotoes.forEach(botao => {
   botao.addEventListener('click', () => {
     const modalId = botao.getAttribute('data-modal');
     document.getElementById(modalId).classList.add('oculto');
   });
 });
 
-window.addEventListener('click', (e) => {
-  if (e.target === modalCadastro) modalCadastro.classList.add('oculto');
-  if (e.target === modalLogin) modalLogin.classList.add('oculto');
-});
-
-formLogin.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const email = document.getElementById('login-email').value;
-  const senha = document.getElementById('login-senha').value;
-
-  console.log('Tentativa de login:', { email, senha });
-
-  alert('Login realizado com sucesso!');
-  modalLogin.classList.add('oculto');
-  formLogin.reset();
+window.addEventListener('click', (event) => {
+  if (event.target === modalLogin) {
+    modalLogin.classList.add('oculto');
+  }
+  if (event.target === modalCadastro) {
+    modalCadastro.classList.add('oculto');
+  }
 });
