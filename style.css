@@ -1,0 +1,61 @@
+.janela { overflow: hidden; width: 200px; }
+.trilho { display: flex; transition: transform 0.4s ease; }
+.slide { min-width: 100%; }
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* empurra os dois grupos para as pontas */
+  padding: 15px 30px;
+}
+
+.topo-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* espaço entre o menu e o botão Sair */
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.topo-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topo nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+}
+.nav-link.active {
+  color: #b25a68;
+  font-weight: bold;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
