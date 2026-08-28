@@ -57,6 +57,65 @@ p{
 }
 
 
+.cliente-conteudo {
+  background: #ffe0e6;  
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.cliente-conteudo h2 {
+  background: none;
+  color: #9b4c59;
+  margin-bottom: 15px;
+}
+
+.cliente-conteudo label {
+  background: none;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.cliente-conteudo input {
+  background-color: #fff5f7;  
+  border: 1px solid #d18994;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cliente-conteudo input:focus {
+  outline: none;
+  border-color: #9b4c59;
+  background-color: #fff;
+}
+
+.cliente-conteudo button[type="submit"] {
+  margin-top: 15px;
+  padding: 12px;
+  background: #b0475a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.cliente-conteudo button[type="submit"]:hover {
+  background: #8f3a49;
+}
+
 .btn-cadastro{
   background-color: #9b4c59;
   color:floralwhite;
@@ -68,6 +127,7 @@ p{
 
 .btn-cadastro:hover {
   background-color: #d18994;
+  background: transparent;
 }
 
 .btn-conta{
@@ -203,65 +263,100 @@ transition: transform 0.6s ease;
   background-color: transparent;
 }
 
+.oculto {
+  display: none;
+}
+
+/*janela flutuante para login/cadastro*/
+
+/* Modal - camada que cobre a tela toda */
 .cliente {
-  position: fixed !important;
+  display: none;              /* controlado pelo JS junto com .oculto */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw !important;
-  height: 100vh !important;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);   /* fundo escurecido */
+  z-index: 1000;
   justify-content: center;
-  z-index: 999;
-  margin: 0;
-  padding: 0;
+  align-items: center;
 }
 
-.cliente.oculto {
-  display: none !important;
+/* Quando NÃO tiver a classe oculto, mostra como flex (pra centralizar) */
+.cliente:not(.oculto) {
+  display: flex;
 }
 
+/* A caixinha branca de dentro */
 .cliente-conteudo {
-  background: #ffe1ea;
-  padding: 2rem;
+  background: #fff;
+  padding: 30px 40px;
   border-radius: 10px;
   width: 90%;
-  max-width: 350px;
-  height: auto !important;
-  box-sizing: border-box;
+  max-width: 400px;
   position: relative;
-  margin: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.25s ease-out;
 }
 
-.cliente-conteudo * {
-  box-sizing: border-box;
+/* Botão de fechar (×) */
+.fechar {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.fechar:hover {
+  color: #b0475a; /* combina com o tom do seu site */
+}
+
+/* Animação suave ao abrir */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Deixa os inputs e formulário organizados dentro do modal */
+.cliente-conteudo form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 .cliente-conteudo label {
-  display: block;
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .cliente-conteudo input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.2rem;
-  border-radius: 5px;
+  padding: 8px 10px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .cliente-conteudo button[type="submit"] {
-  margin-top: 1.2rem;
-  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  background: #b0475a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.fechar {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  font-size: 1.3rem;
+.cliente-conteudo button[type="submit"]:hover {
+  background: #8f3a49;
 }
