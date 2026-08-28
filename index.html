@@ -20,42 +20,85 @@
             <a href="#produtos" class="nav-link">Produtos</a>
         </nav>
   </div>
-  <img src="imagem/logo.svg" alt="Beauty Space" class="logo-img">
+  <img src="imagens/logo.svg" alt="Beauty Space" class="logo-img">
 </header>
 
 <section id="inicio" class="secao">
   <h1>Bem vindo(a) ao Beauty Space!</h1>
   <p>Um espaço para você se dar a atenção que merece.</p>
-    <button id="btn-logout" class="btn-cadastro">Cadastre-se aqui</button>
-    <button id="btn-logout" class="btn-conta">Entre com uma conta existente</button>
+    <button id="btn-cadastro" class="btn-cadastro">Cadastre-se aqui</button>
+    <button id="btn-login" class="btn-conta">Entre com uma conta existente</button>
 </section>
+
+<div id="cliente-login" class="cliente oculto">
+  <div class="cliente-conteudo">
+    <span class="fechar" data-modal="cliente-login">&times;</span>
+    <h2>Entrar</h2>
+    <form id="form-login">
+      <label for="login-email">E-mail</label>
+      <input type="email" id="login-email" required>
+
+      <label for="login-senha">Senha</label>
+      <input type="password" id="login-senha" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+</div>
+
 
 <div class="carrossel">
   <div class="janela">
     <div class="trilho" id="trilho">
       <div class="slide">
-        <img src="imagem/wella_progressiva.png" alt="Wella Progressiva" 50px>
+        <img src="imagens/cronograma_capilar.jpg" alt="Kit cronograma_capilar">
       </div>
       <div class="slide">
-        <img src="imagem/labelle_óleo.png" alt="Hidratação Cachos" 10px>
+        <img src="imagens/kit_nutrição.jpg" alt="Kit kit_nutrição">
       </div>
       <div class="slide">
-        <img src="imagem/neutrogena_loção.png" alt="Labelle Óleo" 10px>
+        <img src="imagens/progressiva_wella.jpg" alt="progressiva_wella">
       </div>
     </div>
+      <div class="btn-carrossel">
         <button id="anterior">◀</button>
         <button id="proximo">▶</button>
+      </div>  
+  </div>
 </div>
 
 <section id="sobre">
-    <h2>Sobre</h2>
-    <p> Nosso site tem como objetivo fonecer para as pessoas produtos
-        para realçar a beleza já existente em cada uma delas.
-    </p>
-    <button id="btn-logout" class="btn-vermais">Conheça mais sobre nós</button>
-
+  <h2>Sobre</h2>
+  <p> Nosso site tem como objetivo fornecer para as pessoas produtos que realcem a beleza já existente em cada uma delas.</p>
+  <button id="btn-vermais" class="btn-vermais">Conheça mais sobre nós</button>
+  <div id="conteudo-extra"></div>
 </section>
 
+<section id="Produtos">
+  <h2>Produtos</h2>
+  <p>Conheça nossos produtos com a qualidade que você só encontra aqui na BeautySpace.</p>
+</section>
+
+<div class="vitrine-produtos">
+  <div class="amostra-produto">
+      <img src="imagens/kit_nutrição.jpg" alt="Kit Nutrição Capilar">
+      <p class="nome-produto">Kit Nutrição Capilar</p>
+      <p class="preco-produto">R$ 89,90</p>
+  </div>
+
+  <div class="amostra-produto">
+      <img src="imagens/cronograma_capilar.jpg" alt="Kit Cronograma Capilar">
+      <p class="nome-produto">Kit Cronograma Capilar</p>
+      <p class="preco-produto">R$ 120,00</p>
+  </div>
+
+  <div class="amostra-produto">
+      <img src="imagens/progressiva_wella.jpg" alt="Progressiva Wella">
+      <p class="nome-produto">Progressiva Wella</p>
+      <p class="preco-produto">R$ 150,00</p>
+  </div>
+
+</div>
 
 </body>
 </html>
