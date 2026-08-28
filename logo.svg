@@ -1,0 +1,13 @@
+<svg width="190" height="48" viewBox="0 0 190 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- ícone: estrela/brilho (referência a "space") -->
+  <path d="M18 4 L21 15 L32 18 L21 21 L18 32 L15 21 L4 18 L15 15 Z" fill="#b25a68"/>
+  <circle cx="30" cy="6" r="2.2" fill="#b25a68"/>
+
+  <!-- texto: Beauty Space -->
+  <text x="42" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#b25a68">
+    Beauty
+  </text>
+  <text x="42" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">
+    Space
+  </text>
+</svg>
